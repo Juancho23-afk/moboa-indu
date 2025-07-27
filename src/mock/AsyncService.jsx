@@ -77,3 +77,14 @@ export const getProducts = () => {
         },2000)
     })
 }
+
+export const getOneProduct = (id)=>{
+    return new Promise ((resolve)=>{
+        setTimeout(()=>{
+            //buscan el prod con el id que se recibe del parametro
+            let oneProduct = products.find((prod)=> prod.id === id)
+            //lo devolvemos
+            resolve(oneProduct)
+        },2000)
+    })
+}
