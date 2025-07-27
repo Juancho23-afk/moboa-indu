@@ -17,7 +17,7 @@ const products = [
         description:'camperas grandes',
         price:50000,
         stock:10,
-        category:'mas vendidos',
+        category:'mas-vendidos',
         img:'../camperas.jpg',
         
     },
@@ -45,7 +45,7 @@ const products = [
         description:'pantalones de hombres',
         price:15000,
         stock:30,
-        category:'mas vendidos',
+        category:'mas-vendidos',
         img:'../pantalones.jpg',
     },
     {

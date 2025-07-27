@@ -7,8 +7,8 @@ export const ItemDetail = ({detalle}) => {
             <h1>Detalle de: {detalle.name}</h1>
             <img alt={detalle.name} src={detalle.img}/>
             <p>{detalle.description}</p>
-            <p>Stock:{detalle.stock}</p>
-            <p>Precio:${detalle.price}</p>
+            <p>Stock: {detalle.stock}</p>
+            <p>Precio: ${detalle.price}</p>
             <ItemCount stock={detalle.stock}/>
         </div>
     ) 
