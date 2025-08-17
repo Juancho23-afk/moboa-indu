@@ -11,6 +11,8 @@ import MiComponenteLog from './components/examples/MiComponenteLog';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import NotFound from './components/NotFound';
+import { CartProvider } from './context/CartContext';
+import Cart from './components/Cart';
 
 function App() {
   const MiComponenteConHoc = withLogging(MiComponenteLog)
@@ -18,13 +20,16 @@ function App() {
 
   return (
     <BrowserRouter>
+    <CartProvider>
     <NavBarBts/>
     <Routes>
       <Route path='/' element={<ItemListContainer saludo='Bienvenidos A MoboaIndu'/>}/>
       <Route path='/categories/:category' element={<ItemListContainer saludo='Estas en la categoria de:'/>}/>
       <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+      <Route path='/cart' element={<Cart/>}/>
       <Route path='*' element={<NotFound/>}/>
     </Routes>
+    </CartProvider>
     </BrowserRouter>
   )
 }

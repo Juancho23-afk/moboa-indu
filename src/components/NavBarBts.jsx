@@ -23,7 +23,7 @@ function NavBarBts() {
                         </NavDropdown>
                     </Nav>
                     <div className="ms-auto">  
-                    <CartWidget/>
+                    <NavLink to='/cart' style={{textDecoration:'none', color:'black'}}><CartWidget/></NavLink>
                     </div>
                 </Navbar.Collapse>
             </Container>

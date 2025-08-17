@@ -1,10 +1,15 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
-export const ItemDetail = ({detalle}) => {
+    const ItemDetail = ({detalle}) => {
+    const {addItem, cart}= useContext(CartContext)
     const onAdd = (cantidad)=> {
             console.log(`compraste ${cantidad} de productos`)
+            addItem(detalle, cantidad)
     }
+    console.log(cart,'carrito')
     return (
         <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <h1>Detalle de: {detalle.name}</h1>
