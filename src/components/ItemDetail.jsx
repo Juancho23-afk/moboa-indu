@@ -2,6 +2,9 @@ import React from 'react'
 import ItemCount from './ItemCount'
 
 export const ItemDetail = ({detalle}) => {
+    const onAdd = (cantidad)=> {
+            console.log(`compraste ${cantidad} de productos`)
+    }
     return (
         <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <h1>Detalle de: {detalle.name}</h1>
@@ -9,7 +12,7 @@ export const ItemDetail = ({detalle}) => {
             <p>{detalle.description}</p>
             <p>Stock: {detalle.stock}</p>
             <p>Precio: ${detalle.price}</p>
-            <ItemCount stock={detalle.stock}/>
+            <ItemCount stock={detalle.stock} onAdd={onAdd}/>
         </div>
     ) 
 }
